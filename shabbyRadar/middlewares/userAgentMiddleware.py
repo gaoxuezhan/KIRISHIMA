@@ -3,6 +3,7 @@ import random #随机选择
 from scrapy.downloadermiddlewares.useragent import UserAgentMiddleware #UserAegent中间件
 from scrapy.downloadermiddlewares.retry import RetryMiddleware #重试中间件
 
+
 class UserAgentMiddleware(UserAgentMiddleware):
     def process_request(self, request, spider):
         # agent = random.choice(self.agents)

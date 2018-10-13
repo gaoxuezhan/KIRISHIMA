@@ -13,6 +13,7 @@ import pymysql
 from scrapy import signals
 from scrapy.xlib.pydispatch import dispatcher
 
+
 class JdSpider(scrapy.Spider):
     name = "arleighBurke"
     # 打开数据库连接
@@ -22,7 +23,7 @@ class JdSpider(scrapy.Spider):
     tableName = "MonetaryFund"
 
     def __init__(self):
-        #关闭时通知清理战场，非常重要
+        # 关闭时通知清理战场，非常重要
         dispatcher.connect(self.spider_closed, signals.spider_closed)
         self.get_filter()
 
